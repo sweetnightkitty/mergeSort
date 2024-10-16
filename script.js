@@ -1,4 +1,5 @@
 const myArray = [3, 2, 1, 13, 8, 5, 0, 1];
+const anotherArray = [105, 79, 100, 110];
 
 function mergeSort(array) {
     //Recursive base case
@@ -7,7 +8,7 @@ function mergeSort(array) {
     }
 
     //Divides all even arrays in half; for uneven arrays math.floor rounds down (3/2 -> 1.5 becomes 1)
-    const halfLength = Math.floor(array / 2);
+    const halfLength = Math.floor(array.length / 2);
     const left = array.slice(0, halfLength);
     const right = array.slice(halfLength);
 
@@ -43,3 +44,4 @@ function merge(left, right) {
 }
 
 console.log(mergeSort(myArray));
+console.log(mergeSort(anotherArray));
